@@ -23,37 +23,37 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-	<style type="text/css">
-	    #block-1 {
-	        background: #000 url('img/lighthouse.jpg');
-	    }
+        <style type="text/css">
+            #block-1 {
+                background: #000 url('img/lighthouse.jpg');
+            }
 
-	    #block-2 {
-	        background: #000 url('img/lisbon.jpg');
-	    }
+            #block-2 {
+                background: #000 url('img/lisbon.jpg');
+            }
 
-	    .block {
-	        border: 1px solid #999;
-		float: left;
-	        margin: 2em;
-	        max-height: 450px;
-	        min-height: 450px;
-		overflow: hidden;
-	        width: 450px;
-	    }
+            .block {
+                border: 1px solid #999;
+                float: left;
+                margin: 2em;
+                max-height: 450px;
+                min-height: 450px;
+                overflow: hidden;
+                width: 450px;
+            }
 
-	    .block .block-content {
-	        background-color: #fff;
-	        background-color: rgba(255, 255, 255, 0.9);
-		height: 450px;
-	        margin-top: 400px;
-		padding: 0 1em;
-	    }
+            .block .block-content {
+                background-color: #fff;
+                background-color: rgba(255, 255, 255, 0.9);
+                height: 450px;
+                margin-top: 400px;
+                padding: 0 1em;
+            }
 
-	    #copyright {
+            #copyright {
                 clear: both;
-	    }
-	</style>
+            }
+        </style>
     </head>
     <body>
 
@@ -81,9 +81,9 @@
             </div>
         </div>
 
-	<div id="copyright">
-	    Images Copyright &copy; 2011 <a href="/photos/stephendgardner/">stephendgardner</a>, <a href="http://creativecommons.org/licenses/by/2.0/" title="Attribution License">some rights reserved</a>.
-	</div>
+        <div id="copyright">
+            Images Copyright &copy; 2011 <a href="/photos/stephendgardner/">stephendgardner</a>, <a href="http://creativecommons.org/licenses/by/2.0/" title="Attribution License">some rights reserved</a>.
+        </div>
 
         <!-- Add your site or application content here -->
 
@@ -91,24 +91,24 @@
         <script src="js/helper.js"></script>
         <script type="application/javascript">
             Zepto(function($){
-	        function showContents(elm) {
-		    $(elm).children('.block-content').animate({
-		        marginTop: 100
-		    });
-		}
+                function showContents(elm) {
+                    $(elm).children('.block-content').animate({
+                        marginTop: 100
+                    });
+                }
                 $('.block').each(function(idx) {
-		    $(this).one('tap', function(e) {
-		        showContents(this);
-		    });
-		    $(this).on('mouseover', function(e) {
-		        showContents(this);
-		    });
+                    $(this).one('tap', function(e) {
+                        showContents(this);
+                    });
+                    $(this).on('mouseover', function(e) {
+                        showContents(this);
+                    });
 /* Don't hide the content
-		    $(this).on('mouseout', function(e) {
-		        $(this).children('.block-content').animate({
-			    marginTop: 400
-			}, 500);
-		    });
+                    $(this).on('mouseout', function(e) {
+                        $(this).children('.block-content').animate({
+                            marginTop: 400
+                        }, 500);
+                    });
 */
                 });
             });
