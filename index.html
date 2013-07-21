@@ -94,7 +94,7 @@
 	        function showContents(elm) {
 		    $(elm).children('.block-content').animate({
 		        marginTop: 100
-		    }, 500);
+		    });
 		}
                 $('.block').each(function(idx) {
 		    $(this).one('tap', function(e) {
@@ -103,11 +103,13 @@
 		    $(this).on('mouseover', function(e) {
 		        showContents(this);
 		    });
+/* Don't hide the content
 		    $(this).on('mouseout', function(e) {
 		        $(this).children('.block-content').animate({
 			    marginTop: 400
 			}, 500);
 		    });
+*/
                 });
             });
         </script>
