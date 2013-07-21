@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="cleartype" content="on">
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#222222">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	<style type="text/css">
+	    #block-1 {
+	        background: #000 url('img/lighthouse.jpg');
+	    }
+
+	    #block-2 {
+	        background: #000 url('img/lisbon.jpg');
+	    }
+
+	    .block {
+	        border: 1px solid #999;
+		float: left;
+	        margin: 2em;
+	        max-height: 450px;
+	        min-height: 450px;
+		overflow: hidden;
+	        width: 450px;
+	    }
+
+	    .block .block-content {
+	        background-color: #fff;
+	        background-color: rgba(255, 255, 255, 0.9);
+		height: 450px;
+	        margin-top: 400px;
+		padding: 0 1em;
+	    }
+
+	    #copyright {
+                clear: both;
+	    }
+	</style>
+    </head>
+    <body>
+
+        <div id="block-1" class="block">
+            <div class="block-content">
+                <h2>Block 1 Title</h2>
+                <ul>
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="block-2" class="block">
+            <div class="block-content">
+                <h2>Block 2 Title</h2>
+                <ul>
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+            </div>
+        </div>
+
+	<div id="copyright">
+	    Images Copyright &copy; 2011 <a href="/photos/stephendgardner/">stephendgardner</a>, <a href="http://creativecommons.org/licenses/by/2.0/" title="Attribution License">some rights reserved</a>.
+	</div>
+
+        <!-- Add your site or application content here -->
+
+        <script src="js/vendor/zepto.min.js"></script>
+        <script src="js/helper.js"></script>
+        <script type="application/javascript">
+            Zepto(function($){
+	        function showContents(elm) {
+		    $(elm).children('.block-content').animate({
+		        marginTop: 100
+		    }, 500);
+		}
+                $('.block').each(function(idx) {
+		    $(this).tap(function(e) {
+		        showContents(this);
+		    });
+		    $(this).on('mouseover', function(e) {
+		        showContents(this);
+		    });
+		    $(this).on('mouseout', function(e) {
+		        $(this).children('.block-content').animate({
+			    marginTop: 400
+			}, 500);
+		    });
+                });
+            });
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+            g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+            s.parentNode.insertBefore(g,s)}(document,"script"));
+        </script>
+    </body>
+</html>
