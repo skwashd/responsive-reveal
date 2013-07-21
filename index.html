@@ -97,7 +97,7 @@
 		    }, 500);
 		}
                 $('.block').each(function(idx) {
-		    $(this).tap(function(e) {
+		    $(this).one('tap', function(e) {
 		        showContents(this);
 		    });
 		    $(this).on('mouseover', function(e) {
